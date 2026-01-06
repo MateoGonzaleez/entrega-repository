@@ -342,4 +342,40 @@ padding-top: 15px;;
   border-radius: 8px;
 }
 
+.moda-contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.moda-izquierda {
+  display: flex;
+  gap: 20px;
+}
+
+.moda-titulo {
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.deportivo-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;   
+  gap: 40px;
+}
+
+.deportivo-lado {
+  display: flex;
+  gap: 20px;
+}
+
+.deportivo-titulo {
+  font-size: 30px;
+  text-transform: uppercase;
+  white-space: nowrap; 
+}
+
 
