@@ -90,9 +90,14 @@ Miguel de tucuman</p>
 <section>
     <article>
          <h2 class="titulos">Dejanos un mensaje</h2>
-        <form method="get">
+        <form method="get" class="formulario-contacto-page">
+
+            <div class="campo">
             <label for="nom" class="texto">Nombre:</label>
             <input type="text" placeholder="Nombre" id="nom">
+             </div>
+
+             <div class="campo">
            <label for="provincia" class="texto">Provincia:</label>
 <select name="provincia" id="provincia">
   <option value="Buenos Aires">Buenos Aires</option>
@@ -120,12 +125,22 @@ Miguel de tucuman</p>
   <option value="Tierra del Fuego">Tierra del Fuego</option>
   <option value="Tucumán">Tucumán</option>
 </select>
+</div>
+
+<div class="campo">
  <label class="texto">Direccion:</label>
             <input type="text" placeholder="Direccion">
+</div>
+           <div class="campo">
             <label class="texto">Email:</label>
             <input type="email" placeholder="Email">
+            </div>
+
+            <div class="campo">
             <label class="texto">Mensaje:</label>
             <textarea></textarea>
+</div>
+
             <input type="submit" value="ENVIAR">
         </form>
     </article>

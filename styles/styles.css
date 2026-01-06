@@ -114,6 +114,7 @@ hr {
   text-align: center;
   font-size: 15px;
   padding: 10px;
+  
 }
 
 
@@ -173,10 +174,14 @@ padding-top: 15px;;
 .quienessomos1{
   display: flex;
   flex-direction: row;
+  text-align: center;
+  margin-top: 100px;
 }
 
-    .textoquienessomos1{
+    .textoquienessomos1 p{
       margin: 10px;
+      max-width: 900px;     
+      margin: 0 auto; 
     }
 
     .videoquienessomos{
@@ -201,29 +206,40 @@ padding-top: 15px;;
 
     .textoquienessomos2{
       text-align: center;
+       max-width: 900px;     
+      margin: 0 auto;
     }
 
     .imagenquienessomos2{
       text-align: center;
       padding-top: 20px;
       padding-left: 20px;
+      width: 500px;
+      height: 500px;
     }
 
     .quienessomos3{
       display: flex;
       flex-direction: row;
+      margin-top: 2px;
     }
+
+    
 
     .textoquienessomos3{
       text-align: center;
       padding-right: 20px;
       padding-top: 20px;
+       max-width: 900px;     
+      margin: 0 auto;
     }
 
     .direccionquienessomos3{
       text-align: center;
       padding-top: 20px;
     }
+
+
 
     
 @media (max-width:720px){
@@ -261,7 +277,41 @@ padding-top: 15px;;
     margin: 0;
     padding: 20px;
   }
+  .deportivo-contenedor,.deportivo-lado,.moda-contenedor,.moda-izquierda,.formulario-contactopag{
+    flex-direction: column;
+  }
+  .qs-bloque{
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .qs-media{
+    width: 100%;
+  }
+
+  .qs-iframe{
+    width: 100%;
+  }
+
+  /* el mapa en mobile */
+  #mult{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+
+  /* tu imagen de "historia" estaba fija 500x500: en mobile rompe */
+  .imagenquienessomos2{
+    width: 100%;
+    height: auto;
+    padding-left: 0;
+  }
+
 }
+
+
+
 
 .mi-navbar {
   background-color: rgb(100, 44, 44);
@@ -297,7 +347,7 @@ padding-top: 15px;;
   flex-grow: 1;
 }
 
-/* centra los <li> del menú */
+
 .navbar-nav {
   display: flex;
   justify-content: center;
@@ -376,6 +426,72 @@ padding-top: 15px;;
   font-size: 30px;
   text-transform: uppercase;
   white-space: nowrap; 
+}
+
+
+.articlespadre,
+.moda-contenedor,
+.deportivo-contenedor{
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;    
+  gap: 20px;
+  width: 100%;
+}
+
+
+
+.qs-bloque{
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.qs-texto{
+  flex: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.qs-media{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* iframes y medios responsivos */
+.qs-iframe{
+  width: 560px;
+  height: auto;
+  border: 0;
+}
+
+.qs-img{
+  max-width: 100%;
+  height: auto;
+}
+
+.formulario-contacto-page{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.campo{
+  display: flex;
+  flex-direction: column;  
+  gap: 6px;
+  align-items: center;
+}
+
+.campo input,
+.campo select,
+.campo textarea{
+  width: 100%;
+  text-align: center;
 }
 
 
