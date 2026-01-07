@@ -494,4 +494,59 @@ padding-top: 15px;;
   text-align: center;
 }
 
+.store-imagenes{
+  width: 175px;
+  height: 175px;
+}
+
+.store-titulo ,
+.deportes-titulo{
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;;
+}
+
+.store-precio{
+  text-align: center;
+  font-size: 25px;
+  padding: 9px;
+}
+
+
+.store-cards{
+  border: 2px solid black;
+  padding: 20px;
+  margin: 8px;
+  width: 300px;
+  text-align: center;
+  display: inline-block;
+
+}
+
+.deportes-imagenes{
+  width: 160px;
+  height: 160px;
+}
+
+
+.deportes-precio{
+  text-align: center;
+  font-size: 9px;
+  padding: 8px;
+}
+
+.deportes-cards{
+  border: 2px solid black;
+  padding: 20px;
+  margin: 8px;
+  width: 280px;
+  text-align: center;
+  display: inline-block;
+}
+
+.deportes-precio{
+  text-align: center;
+  font-size: 25px;
+  padding: 9px;
+}
 
