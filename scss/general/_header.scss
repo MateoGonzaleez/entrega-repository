@@ -29,3 +29,14 @@ header {
 .header1 {
   @include header1(flex, row, flex-start, center, center, 30px, 20px, wrap);
 }
+
+@mixin hdr($display,$flex-direction,$text-align,$margin,$padding){
+  display: flex;
+  flex-direction: $flex-direction;
+  text-align: $text-align;
+  margin: $margin;
+  padding: $padding;
+}
+
+footer {
+  @include hdr(flex, column, left, 0, 20px);}

@@ -1,5 +1,6 @@
 @use "../utilities/variables" as *;
 
+
 @mixin titulares($transform, $font-size) {
   text-transform: $transform;
   font-size: $font-size;
@@ -7,6 +8,28 @@
 
 .titulos {
   @include titulares(uppercase, 30px);
+}
+
+@mixin link {
+  color: $color-link;
+  text-decoration: $link-decoration;
+  font-size: $link-font-size;
+
+  &:link {
+    color: $color-link;
+  }
+
+  &:hover {
+    color: $color-link-hover;
+  }
+
+  &:active {
+    color: $color-link-active;
+  }
+}
+
+a {
+  @include link;
 }
 
 

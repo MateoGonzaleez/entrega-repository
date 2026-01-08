@@ -3,3 +3,83 @@
 footer {
     background-color: $fondo-header;
 }
+
+@mixin link {
+  color: $color-link;
+  text-decoration: $link-decoration;
+  font-size: $link-font-size;
+
+  &:link {
+    color: $color-link;
+  }
+
+  &:hover {
+    color: $color-link-hover;
+  }
+
+  &:active {
+    color: $color-link-active;
+  }
+}
+
+@mixin ftr($display,$flex-direction,$text-align,$margin,$padding){
+  display: flex;
+  flex-direction: $flex-direction;
+  text-align: $text-align;
+  margin: $margin;
+  padding: $padding;
+}
+
+footer {
+  @include ftr(flex, column, left, 0, 20px);}
+
+  @mixin nalink ($font-size, $transform,$color){
+    font-size: $font-size;
+    text-transform: $transform;
+    color: $color;
+  }
+
+  .nav-link {
+    @include nalink(16px, uppercase, black);
+  }
+
+  @mixin formlbl($font-size,$color){
+    font-size: $font-size;
+    color: $color;
+  }
+
+  .form-label{
+    @include formlbl(12px, white);
+  }
+
+  .form-control::placeholder {
+  color: $color-placeholder;
+}
+
+@mixin frmctrl(
+  $background-color,
+  $color,
+  $border-style,
+  $border-color,
+  $border-radius,
+  $width,
+  $height,
+  $text-align,
+  $margin,
+  $display
+) {
+  background-color: $background-color;
+  color: $color;
+  border-style: $border-style;
+  border-color: $border-color;
+  border-radius: $border-radius;
+  width: $width;
+  height: $height;
+  text-align: $text-align;
+  margin: $margin;
+  display: $display;
+}
+
+.form-control {
+  @include frmctrl( black, white,solid, white,5px,50%,30px,center,0,block);
+}
