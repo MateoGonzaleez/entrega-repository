@@ -1,3 +1,6 @@
-@use '../utilities/variables';
-@use '../general/general';
-@use '../pagesscs/contacto';
+@use "utilities/variables" as *;
+@use 'pagesscs/contacto';
+@use 'general/general';
+@use 'general/header';
+@use 'general/footer';
+@use 'general/navbar';

@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"main.css"}
+{"version":3,"sourceRoot":"","sources":["../scss/general/_header.scss","../scss/utilities/_variables.scss","../scss/general/_footer.scss","../scss/general/_navbar.scss"],"names":[],"mappings":"AAQA;EALE,OAMmB;EALnB,QAKyB;EAJzB,YAI+B;;;AAGjC;EACE,kBCba;;;AD4Bf;EAVE,SAWiB;EAVjB,gBAUuB;EATvB,iBAS4B;EAR5B,eAQwC;EAPxC,aAOgD;EANhD,SAMwD;EALxD,WAK8D;EAJ9D,WAIoE;;;AE3BtE;EACI,kBDHW;;;AEOf;EAJE,gBAKmB;EAJnB,WAI8B","file":"main.css"}

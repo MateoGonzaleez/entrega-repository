@@ -1,3 +1,31 @@
+.logos-ap {
+  width: 50px;
+  height: 50px;
+  text-align: end;
+}
 
+header {
+  background-color: rgb(100, 44, 44);
+}
+
+.header1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  padding: 30px;
+  font-size: 20px;
+  flex-wrap: wrap;
+}
+
+footer {
+  background-color: rgb(100, 44, 44);
+}
+
+.titulos {
+  text-transform: uppercase;
+  font-size: 30px;
+}
 
 /*# sourceMappingURL=main.css.map */

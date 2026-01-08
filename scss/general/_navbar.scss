@@ -1,0 +1,12 @@
+@use "../utilities/variables" as *;
+
+@mixin titulares($transform, $font-size) {
+  text-transform: $transform;
+  font-size: $font-size;
+}
+
+.titulos {
+  @include titulares(uppercase, 30px);
+}
+
+

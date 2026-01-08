@@ -1,0 +1,31 @@
+@use "../utilities/variables" as *;
+
+@mixin logos-app($width, $height, $align) {
+  width: $width;
+  height: $height;
+  text-align: $align;
+}
+
+.logos-ap {
+  @include logos-app(50px, 50px, end);
+}
+
+header {
+  background-color: $fondo-header;
+
+}
+
+@mixin header1($display, $flex-direction, $justify-content, $align-content, $align-items, $padding, $font-size, $flex-wrap){
+  display: $display;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-content: $align-content;
+  align-items: $align-items;
+  padding: $padding;
+  font-size: $font-size;
+  flex-wrap: $flex-wrap;
+}
+
+.header1 {
+  @include header1(flex, row, flex-start, center, center, 30px, 20px, wrap);
+}
