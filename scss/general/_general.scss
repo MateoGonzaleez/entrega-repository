@@ -135,3 +135,12 @@ main, section{
 .texto{
     @include txt(15px, center, 10px);
 }
+
+@mixin mul ($width,$height){
+    width: $width;
+    height: $height;
+}
+
+#mult{
+    @include mul(300px, 300px);
+}

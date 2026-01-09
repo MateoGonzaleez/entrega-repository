@@ -32,4 +32,49 @@ a {
   @include link;
 }
 
+@mixin mnb ($background-color, $padding-top, $padding-bottom,$text-align,$display,$justify-content,$width){
+  background-color: $background-color;
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+  text-align: $text-align;
+  display: $display;
+  justify-content: $justify-content;
+  width: $width;
+}
+
+.mi-navbar{
+  @include mnb(rgb(100, 44, 44), 40px, 40px, center, flex, center, 100%);
+}
+
+.nav-link:hover{
+  color: $navlinnkhover;
+}
+
+.nav-link{
+  text-decoration: $navlinkk;
+}
+
+@mixin nb ($font-size,$font-weight){
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+
+.navbar-brand{
+  @include nb(28px, bold);
+}
+
+#navbarSupportedContent{
+  flex-grow: $nbsc;
+}
+
+@mixin nbn ($display,$justify-content,$width,$gap){
+  display: $display;
+  justify-content: $justify-content;
+  width: $width;
+  gap: $gap;
+}
+
+.navbar-nav{
+  @include nbn(flex, center, 100%, 40px);
+}
 

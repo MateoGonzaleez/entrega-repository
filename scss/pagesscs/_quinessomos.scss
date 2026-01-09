@@ -1,0 +1,151 @@
+@use "../utilities/variables" as *;
+
+@mixin qsms1 ($display,$flex-direction,$text-align,$margin-top){
+    display: $display;
+    flex-direction: $flex-direction;
+    text-align: $text-align;
+    margin-top: $margin-top;
+}
+
+.quienessomos1{
+    @include qsms1(flex, row, center, 100px);
+}
+
+@mixin txtqsms1($margin, $max-width) {
+  margin: $margin;
+  max-width: $max-width;
+}
+
+.textoquienessomos1 p {
+  @include txtqsms1(0 auto, 900px);
+}
+
+
+@mixin dvdqsmsq ($text-align,$margin-top, $display, $flex-direction,$justify-content,$align-items,$flex-wrap){
+    text-align: $text-align;
+    margin-top: $margin-top;
+    display: $display;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: $flex-wrap;
+}
+
+.videoquienessomos{
+    @include dvdqsmsq(right, 100px, flex, column, flex-end, center, wrap);
+}
+
+.titulo-quinessosmos{
+margin-bottom: $titulo-qsms;
+}
+
+@mixin qsms2 ($display,$flex-direction){
+    display: $display;
+    flex-direction: $flex-direction;
+}
+
+.quienessomos2{
+    @include qsms2(flex, row);
+}
+
+@mixin txtqsms2 ($text-align,$max-width,$margin){
+    text-align: $text-align;
+    max-width: $max-width;
+    margin: $margin;
+}
+
+.textoquienessomos2{
+    @include txtqsms2(center, 900px, 0 auto);
+}
+
+@mixin imgqsms2 ($text-align,$padding-top,$padding-left,$width,$height){
+    text-align: $text-align;
+    padding-top: $padding-top;
+    padding-left: $padding-left;
+    width: $width;
+    height: $height;
+}
+
+.imagenquienessomos2{
+    @include imgqsms2(center, 20, 20, 500px, 500px);
+}
+
+@mixin qsms3 ($display, $flex-direction,$margin-top){
+    display: $display;
+    flex-direction: $flex-direction;
+    margin-top: $margin-top;
+}
+
+.quienessomos3{
+    @include qsms3(flex, row, 2px);
+}
+
+@mixin txtqsms3 ($text-align,$padding-right,$padding-top,$max-width,$margin){
+    text-align: $text-align;
+    padding-right: $padding-right;
+    padding-top: $padding-top;
+    max-width: $max-width;
+    margin: $margin;
+}
+
+.textoquienessomos3{
+    @include txtqsms3(center, 20px, 20px, 900px, 0 auto);
+}
+
+@mixin direcqsms ($text-align,$padding-top){
+    text-align: $text-align;
+    padding-top: $padding-top;
+}
+
+.direccionquienessomos3{
+    @include direcqsms(center, 20px);
+}
+
+@mixin qsmsb ($display, $gap, $align-items){
+    display: $display;
+    gap: $gap;
+    align-items: $align-items;
+}
+
+.qs-bloque{
+    @include qsmsb(flex, 24px, center);
+}
+
+@mixin qs-texto($max-width: 900px) {
+  flex: 1;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.qs-texto {
+  @include qs-texto;
+}
+
+@mixin qs-med {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.qs-med {
+  @include qs-med;
+}
+
+@mixin qsmsifr ($width,$height,$border){
+    width: $width;
+    height: $height;
+    border: $border;
+}
+
+.qs-iframe{
+    @include qsmsifr(560px, auto, 0);
+}
+
+@mixin qsmsimg ($width,$height){
+    width: $width;
+    height: $height;
+}
+
+.qs-img{
+    @include qsmsimg(100%, auto);
+}
