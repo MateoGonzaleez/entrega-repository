@@ -371,8 +371,68 @@ a:active {
 .quienessomos1 {
   display: flex;
   flex-direction: row;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
   margin-top: 100px;
+}
+
+.quienessomos2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.quienessomos3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 2px;
+}
+
+.qs-bloque {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  width: 100%;
+}
+
+.qs-texto {
+  flex: 1;
+  min-width: 280px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.qs-media,
+.qs-med {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qs-media iframe,
+.qs-med iframe,
+.videoquienessomos1 iframe,
+.videoquienessomos iframe,
+.direccionquienessomos3 iframe {
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 16/9;
+  height: auto;
+  border: 0;
 }
 
 .textoquienessomos1 p {
@@ -380,43 +440,10 @@ a:active {
   max-width: 900px;
 }
 
-.videoquienessomos {
-  text-align: right;
-  margin-top: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.titulo-quinessosmos {
-  margin-bottom: margin-bottom 10px;
-}
-
-.quienessomos2 {
-  display: flex;
-  flex-direction: row;
-}
-
 .textoquienessomos2 {
   text-align: center;
   max-width: 900px;
   margin: 0 auto;
-}
-
-.imagenquienessomos2 {
-  text-align: center;
-  padding-top: 20;
-  padding-left: 20;
-  width: 500px;
-  height: 500px;
-}
-
-.quienessomos3 {
-  display: flex;
-  flex-direction: row;
-  margin-top: 2px;
 }
 
 .textoquienessomos3 {
@@ -427,38 +454,114 @@ a:active {
   margin: 0 auto;
 }
 
-.direccionquienessomos3 {
-  text-align: center;
-  padding-top: 20px;
-}
-
-.qs-bloque {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-}
-
-.qs-texto {
-  flex: 1;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.qs-med {
-  flex: 1;
+.imagenquienessomos2 {
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-left: 20px;
 }
-
-.qs-iframe {
-  width: 560px;
-  height: auto;
-  border: 0;
-}
-
-.qs-img {
+.imagenquienessomos2 img {
   width: 100%;
+  max-width: 500px;
   height: auto;
+}
+
+#mult {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 16/9;
+  height: auto;
+}
+
+.titulo-quienessosmos,
+.titulo-quinessosmos {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 720px) {
+  .qs-bloque {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  .quienessomos1 {
+    margin-top: 20px;
+  }
+  .qs-media iframe,
+  .qs-med iframe,
+  .videoquienessomos1 iframe,
+  .videoquienessomos iframe,
+  .direccionquienessomos3 iframe {
+    max-width: 100%;
+  }
+  .imagenquienessomos2 {
+    padding-left: 0;
+  }
+  .imagenquienessomos2 img {
+    max-width: 100%;
+  }
+  #mult {
+    max-width: 100%;
+  }
+}
+@media (max-width: 720px) {
+  header .header1 {
+    flex-direction: column;
+    text-align: left;
+    margin: 0;
+    padding: 20px;
+  }
+  .articlespadre {
+    flex-direction: column;
+  }
+  .texteframe {
+    flex-direction: column;
+  }
+  .textframe h3 {
+    text-align: center;
+  }
+  .imagenes {
+    width: 100%;
+    height: auto;
+  }
+  .articulos {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .frameindex iframe {
+    width: 100%;
+    height: auto;
+  }
+  .deportivo-contenedor,
+  .deportivo-lado,
+  .moda-contenedor,
+  .moda-izquierda,
+  .formulario-contactopag {
+    flex-direction: column;
+  }
+  .qs-bloque {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  .qs-media,
+  .qs-iframe {
+    width: 100%;
+  }
+  /* mapa mobile */
+  #mult {
+    width: 100%;
+    aspect-ratio: 16/9;
+    height: auto;
+  }
+  /* imagen historia */
+  .imagenquienessomos2 {
+    width: 100%;
+    height: auto;
+    padding-left: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,151 +1,148 @@
 @use "../utilities/variables" as *;
 
-@mixin qsms1 ($display,$flex-direction,$text-align,$margin-top){
-    display: $display;
-    flex-direction: $flex-direction;
-    text-align: $text-align;
-    margin-top: $margin-top;
+@mixin flexbox($dir: row, $justify: center, $align: center, $wrap: wrap, $gap: 0) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+  gap: $gap;
 }
 
-.quienessomos1{
-    @include qsms1(flex, row, center, 100px);
-}
-
-@mixin txtqsms1($margin, $max-width) {
-  margin: $margin;
-  max-width: $max-width;
-}
-
-.textoquienessomos1 p {
-  @include txtqsms1(0 auto, 900px);
-}
-
-
-@mixin dvdqsmsq ($text-align,$margin-top, $display, $flex-direction,$justify-content,$align-items,$flex-wrap){
-    text-align: $text-align;
-    margin-top: $margin-top;
-    display: $display;
-    flex-direction: $flex-direction;
-    justify-content: $justify-content;
-    align-items: $align-items;
-    flex-wrap: $flex-wrap;
-}
-
-.videoquienessomos{
-    @include dvdqsmsq(right, 100px, flex, column, flex-end, center, wrap);
-}
-
-.titulo-quinessosmos{
-margin-bottom: $titulo-qsms;
-}
-
-@mixin qsms2 ($display,$flex-direction){
-    display: $display;
-    flex-direction: $flex-direction;
-}
-
-.quienessomos2{
-    @include qsms2(flex, row);
-}
-
-@mixin txtqsms2 ($text-align,$max-width,$margin){
-    text-align: $text-align;
-    max-width: $max-width;
-    margin: $margin;
-}
-
-.textoquienessomos2{
-    @include txtqsms2(center, 900px, 0 auto);
-}
-
-@mixin imgqsms2 ($text-align,$padding-top,$padding-left,$width,$height){
-    text-align: $text-align;
-    padding-top: $padding-top;
-    padding-left: $padding-left;
-    width: $width;
-    height: $height;
-}
-
-.imagenquienessomos2{
-    @include imgqsms2(center, 20, 20, 500px, 500px);
-}
-
-@mixin qsms3 ($display, $flex-direction,$margin-top){
-    display: $display;
-    flex-direction: $flex-direction;
-    margin-top: $margin-top;
-}
-
-.quienessomos3{
-    @include qsms3(flex, row, 2px);
-}
-
-@mixin txtqsms3 ($text-align,$padding-right,$padding-top,$max-width,$margin){
-    text-align: $text-align;
-    padding-right: $padding-right;
-    padding-top: $padding-top;
-    max-width: $max-width;
-    margin: $margin;
-}
-
-.textoquienessomos3{
-    @include txtqsms3(center, 20px, 20px, 900px, 0 auto);
-}
-
-@mixin direcqsms ($text-align,$padding-top){
-    text-align: $text-align;
-    padding-top: $padding-top;
-}
-
-.direccionquienessomos3{
-    @include direcqsms(center, 20px);
-}
-
-@mixin qsmsb ($display, $gap, $align-items){
-    display: $display;
-    gap: $gap;
-    align-items: $align-items;
-}
-
-.qs-bloque{
-    @include qsmsb(flex, 24px, center);
-}
-
-@mixin qs-texto($max-width: 900px) {
+@mixin text-block($max: $qs-max-text) {
   flex: 1;
-  max-width: $max-width;
+  min-width: 280px;
+  max-width: $max;
   margin: 0 auto;
 }
 
-.qs-texto {
-  @include qs-texto;
-}
-
-@mixin qs-med {
+@mixin media-block {
   flex: 1;
+  min-width: 280px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
+@mixin responsive-iframe($max: $qs-max-media) {
+  width: 100%;
+  max-width: $max;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+}
+
+@mixin mobile {
+  @media (max-width: $bp-mobile) {
+    @content;
+  }
+}
+
+.quienessomos1 {
+  @include flexbox(row, center, center, wrap, $qs-gap);
+  margin-top: 100px;
+}
+
+.quienessomos2 {
+  @include flexbox(row, center, center, wrap, $qs-gap);
+}
+
+.quienessomos3 {
+  @include flexbox(row, center, center, wrap, $qs-gap);
+  margin-top: 2px;
+}
+.qs-bloque {
+  @include flexbox(row, center, center, wrap, $qs-gap);
+  width: 100%;
+}
+
+.qs-texto {
+  @include text-block($qs-max-text);
+}
+.qs-media,
 .qs-med {
-  @include qs-med;
+  @include media-block;
+}
+.qs-media iframe,
+.qs-med iframe,
+.videoquienessomos1 iframe,
+.videoquienessomos iframe,
+.direccionquienessomos3 iframe {
+  @include responsive-iframe($qs-max-media);
+}
+.textoquienessomos1 p {
+  margin: 0 auto;
+  max-width: $qs-max-text;
 }
 
-@mixin qsmsifr ($width,$height,$border){
-    width: $width;
-    height: $height;
-    border: $border;
+.textoquienessomos2 {
+  text-align: center;
+  max-width: $qs-max-text;
+  margin: 0 auto;
 }
 
-.qs-iframe{
-    @include qsmsifr(560px, auto, 0);
+.textoquienessomos3 {
+  text-align: center;
+  padding-right: 20px;
+  padding-top: 20px;
+  max-width: $qs-max-text;
+  margin: 0 auto;
 }
 
-@mixin qsmsimg ($width,$height){
-    width: $width;
-    height: $height;
+
+.imagenquienessomos2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: $qs-space;
+  padding-left: $qs-space;
+
+  img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+}
+#mult {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+.titulo-quienessosmos,
+.titulo-quinessosmos {
+  margin-bottom: 10px;
 }
 
-.qs-img{
-    @include qsmsimg(100%, auto);
+@include mobile {
+  .qs-bloque {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .quienessomos1 {
+    margin-top: 20px;
+  }
+
+  
+  .qs-media iframe,
+  .qs-med iframe,
+  .videoquienessomos1 iframe,
+  .videoquienessomos iframe,
+  .direccionquienessomos3 iframe {
+    max-width: 100%;
+  }
+
+  .imagenquienessomos2 {
+    padding-left: 0;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  #mult {
+    max-width: 100%;
+  }
 }
