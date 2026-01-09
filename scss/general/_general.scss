@@ -3,3 +3,135 @@
 hr {
     border: $hr
 }
+
+@mixin arpadr ($display,$flex-direction,$justify-content,$align-items,$flex-wrap){
+    display: $display;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: $flex-wrap;
+    
+}
+
+.articlespadre{
+    @include arpadr(flex, row, space-evenly, center, wrap);
+}
+
+@mixin arts($border,$padding,$margin,$width,$height,$text-align,$display){
+    border: $border;
+    padding: $padding;
+    margin: $margin;
+    width: $width;
+    height: $height;
+    text-align: $text-align;
+    display: $display;
+}
+
+.articulos{
+    @include arts(2px solid black, 80px, 10px, 400px, auto, center, inline-block);
+}
+
+@mixin image ($width,$height){
+    width: $width;
+    height: $height;
+}
+
+.imagenes{
+    @include image(250px, 250px);
+}
+
+@mixin enezeta ($text-align, $font-size,$padding){
+    text-align: $text-align;
+    font-size: $font-size;
+    padding: $padding;
+}
+
+.nz{
+    @include enezeta(center, 20px, 20px);
+}
+
+@mixin precio ($text-align,$font-size,$padding){
+    text-align: $text-align;
+    font-size: $font-size;
+    padding: $padding;
+}
+
+.price{
+    @include precio(center, 20px, 20px);
+}
+
+@mixin cuerpo($font-family, $background-color,$color,$width){
+    font-family: $font-family;
+    background-color: $background-color;
+    color: $color;
+    width: $width;
+}
+
+body{
+    @include cuerpo("Play", rgb(50, 49, 49), white, 100%);
+}
+
+@mixin mainsection ($background-color,$padding,$margin){
+    background-color: $background-color;
+    padding: $padding;
+}
+
+main, section{
+    @include mainsection(rgb(50, 49, 49), 20px, 20px);
+}
+
+@mixin articless ($background-color,$padding,$margin,$border-radius){
+    background-color: $background-color;
+    padding: $padding;
+    margin: $margin;
+    border-radius: $border-radius;
+}
+
+.articles{
+    @include articless(rgb(50, 49, 49), 15, 10px 0, 8px);
+}
+
+@mixin textmarco ($display,$flex-direction,$justify-content,$align-items,$flex-wrap){
+    display: $display;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: $flex-wrap;
+}
+
+.textframe{
+    @include textmarco(flex, column, space-between, flex-start, wrap);
+}
+
+@mixin textomarco ($display,$flex-direction,$align-items){
+    display: $display;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+}
+
+.texteframe{
+    @include textomarco(flex, row, flex-start);
+}
+
+@mixin marcoindex ($display, $flex-direction, $justify-content, $align-items, $flex-wrap,$padding-top){
+    display: $display;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: $flex-wrap;
+    padding-top: $padding-top;
+}
+
+.frameindex{
+    @include marcoindex(flex, row, center, center, wrap, 15px);
+}
+
+@mixin txt ($font-size,$text-align,$padding){
+    font-size: $font-size;
+    text-align: $text-align;
+    padding: $padding;
+}
+
+.texto{
+    @include txt(15px, center, 10px);
+}

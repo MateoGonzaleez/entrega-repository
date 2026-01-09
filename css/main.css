@@ -1,5 +1,110 @@
+.formulario-contacto-page {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  text-align: center;
+}
+
 hr {
   border: 1px solid black;
+}
+
+.articlespadre {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.articulos {
+  border: 2px solid black;
+  padding: 80px;
+  margin: 10px;
+  width: 400px;
+  height: auto;
+  text-align: center;
+  display: inline-block;
+}
+
+.imagenes {
+  width: 250px;
+  height: 250px;
+}
+
+.nz {
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.price {
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+}
+
+body {
+  font-family: "Play";
+  background-color: rgb(50, 49, 49);
+  color: white;
+  width: 100%;
+}
+
+main, section {
+  background-color: rgb(50, 49, 49);
+  padding: 20px;
+}
+
+.articles {
+  background-color: rgb(50, 49, 49);
+  padding: 15;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.textframe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.texteframe {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.frameindex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 15px;
+}
+
+.texto {
+  font-size: 15px;
+  text-align: center;
+  padding: 10px;
 }
 
 .logos-ap {
@@ -103,6 +208,15 @@ footer .form-control {
   box-sizing: border-box;
 }
 
+button {
+  background-color: #7C3AED;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
 .titulos {
   text-transform: uppercase;
   font-size: 30px;
@@ -123,7 +237,90 @@ a:active {
   color: goldenrod;
 }
 
+.moda-contenedor {
+  display: flex;
+  flex-direction: center;
+  justify-content: space-evenly;
+}
+
+.store-cards {
+  border: 2px solid black;
+  padding: 20px;
+  margin: 8px;
+  width: 300px;
+  height: auto;
+  text-align: center;
+  display: inline-block;
+}
+
+.store-imagenes {
+  width: 175px;
+  height: 175px;
+}
+
+.store-titulo, .store-titulo {
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.deportes-precio, .store-precio {
+  text-align: center;
+  font-size: 25px;
+  padding: 9px;
+}
+
+.deportes-cards {
+  border: 2px solid black;
+  padding: 20px;
+  margin: 8px;
+  width: 280px;
+  text-align: center;
+  display: inline-block;
+}
+
+.deportes-imagenes {
+  width: 160px;
+  height: 160px;
+}
+
+.moda-izquierda {
+  display: flex;
+  gap: 20px;
+}
+
+.moda-titulo {
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.deportivo-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 40px;
+}
+
+.deportivo-titulo {
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.deportivo-lado {
+  display: flex;
+  gap: 20px;
+}
+
+.articlespadre, .moda-contenedor, .deportivo-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
 /*# sourceMappingURL=main.css.map */
-
-/* HEADER Y FOOTER HASTA AQUI */ 
-

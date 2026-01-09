@@ -131,3 +131,16 @@ footer form {
 footer .form-control {
   @include form-controls-full;
 }
+
+@mixin boton($background-color, $color, $border,$padding, $border-radius,$font-weight){
+  background-color: $background-color;
+  color: $color;
+  border: $border;
+  padding: $padding;
+  border-radius: $border-radius;
+  font-weight: $font-weight;
+}
+
+button {
+  @include boton(#7C3AED, white, none, 10px 25px, 8px, bold);
+}
