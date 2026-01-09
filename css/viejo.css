@@ -33,14 +33,6 @@ html {
   width: 100%;
  }
 
- header, footer {
-  background-color: rgb(100, 44, 44);
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  width: 100%;
-}
-
 main, section {
   background-color: rgb(50, 49, 49);
   padding: 20px;
@@ -67,11 +59,6 @@ a {
   text-decoration: underline;
   font-size: 20px;
 }
-
-hr {
-  border: 1px solid #3A3A3A;
-}
-
 
 .nz {
   text-align: center;
@@ -122,17 +109,6 @@ padding-top: 15px;;
       display: flex;
       flex-direction: row;
       align-items: flex-start;
-    }
-
-    
-
-    .logossocialmedia{
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-right: 19px;
     }
 
 .quienessomos1{
@@ -311,28 +287,6 @@ padding-top: 15px;;
 #emailHelp {
   color: white;
   font-size: 12px;
-}
-
-.form-control{
-  background-color: black;
-  color: white;
-  border-style: solid;
-  border-color: white;
-  border-radius: 5px;
-  color: white;
-  width: 50%;
-  height: 30px;
-  text-align: center;
-   margin: 0 auto;      
-  display: block;
-}
-
-.btn-primary {
-  background-color: #7C3AED;
-  border-color: #7C3AED;
-  color: white;
-  padding: 10px 25px;
-  border-radius: 8px;
 }
 
 .moda-contenedor {

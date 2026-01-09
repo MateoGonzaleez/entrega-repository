@@ -83,3 +83,51 @@ footer {
 .form-control {
   @include frmctrl( black, white,solid, white,5px,50%,30px,center,0,block);
 }
+
+@mixin btnprymr ($bacground-color, $border-color, $color,$padding,$vorder-radius){
+  background-color: $bacground-color;
+  border-color: $border-color;
+  color: $color;
+  padding: $padding;
+  border-radius: $vorder-radius;
+}
+
+.btn-primary {
+  @include btnprymr(#7C3AED, #7C3AED, white, 10px 25px, 8px);
+}
+
+@mixin lsm($display, $flex-direction, $justify-content,$align-items, $flex-wrap, $margin-right){
+  display: $display;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: $flex-wrap;
+  margin-right: $margin-right;
+}
+
+.logossocialmedia {
+  @include lsm(flex, row, flex-end, center, wrap, 19px);
+}
+
+@mixin form-center($max-width: 420px, $gap: 12px) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  gap: $gap;
+}
+
+footer form {
+  @include form-center(420px, 12px);
+}
+
+@mixin form-controls-full {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+footer .form-control {
+  @include form-controls-full;
+}
