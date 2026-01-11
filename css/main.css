@@ -40,6 +40,7 @@ hr {
   height: auto;
   text-align: center;
   display: inline-block;
+  background: linear-gradient(135deg, #815959, #4a2c1f);
 }
 
 .imagenes {
@@ -202,6 +203,10 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   margin-right: 19px;
+  transition: transform 0.6s ease;
+}
+.logossocialmedia:hover {
+  transform: translate(3px, -3px) scale(1.05);
 }
 
 footer form {
@@ -237,6 +242,7 @@ a {
   color: black;
   text-decoration: underline;
   font-size: 20px;
+  transition: all 3s;
 }
 a:link {
   color: black;
@@ -563,5 +569,4 @@ a:active {
     padding-left: 0;
   }
 }
-
 /*# sourceMappingURL=main.css.map */

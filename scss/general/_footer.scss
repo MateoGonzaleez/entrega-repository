@@ -8,6 +8,7 @@ footer {
   color: $color-link;
   text-decoration: $link-decoration;
   font-size: $link-font-size;
+  transition: all 3s;  // INCLUSION TRANSITION //
 
   &:link {
     color: $color-link;
@@ -103,11 +104,19 @@ footer {
   align-items: $align-items;
   flex-wrap: $flex-wrap;
   margin-right: $margin-right;
+  transition: transform 0.6s ease;  // INCLUSION DE TRANSFORM, SCALE Y TRANSLATE //
 }
 
 .logossocialmedia {
   @include lsm(flex, row, flex-end, center, wrap, 19px);
+
+  &:hover {
+    transform: translate(3px, -3px) scale(1.05);
+  }
 }
+
+
+
 
 @mixin form-center($max-width: 420px, $gap: 12px) {
   display: flex;

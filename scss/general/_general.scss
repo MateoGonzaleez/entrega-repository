@@ -17,6 +17,7 @@ hr {
     @include arpadr(flex, row, space-evenly, center, wrap);
 }
 
+
 @mixin arts($border,$padding,$margin,$width,$height,$text-align,$display){
     border: $border;
     padding: $padding;
@@ -25,11 +26,13 @@ hr {
     height: $height;
     text-align: $text-align;
     display: $display;
+    background: linear-gradient(135deg, #815959, #4a2c1f); // INCLUSION DE GRADIENTES //
 }
 
 .articulos{
     @include arts(2px solid black, 80px, 10px, 400px, auto, center, inline-block);
 }
+
 
 @mixin image ($width,$height){
     width: $width;
