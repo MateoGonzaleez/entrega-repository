@@ -14,7 +14,7 @@
   color: $color-link;
   text-decoration: $link-decoration;
   font-size: $link-font-size;
-  transition: all 3s;  // INCLUSION DE TRANSITION // 
+  transition: all 3s;  /* INCLUSION DE TRANSITION */ 
 
   &:link {
     color: $color-link;

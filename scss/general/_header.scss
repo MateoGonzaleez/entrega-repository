@@ -11,7 +11,7 @@
 }
 
 header {
-  background-color: $fondo-header;
+  background-color: $fondo-header; /*  INCLUSION DE VARIABLES  */ 
 
 }
 
@@ -23,7 +23,7 @@ header {
   align-items: $align-items;
   padding: $padding;
   font-size: $font-size;
-  flex-wrap: $flex-wrap;
+  flex-wrap: $flex-wrap;   /*  INCLUSION DE MIXIN  */ 
 }
 
 .header1 {

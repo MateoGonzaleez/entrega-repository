@@ -40,7 +40,7 @@ hr {
   height: auto;
   text-align: center;
   display: inline-block;
-  background: linear-gradient(135deg, #815959, #4a2c1f);
+  background: linear-gradient(135deg, #815959, #4a2c1f); /* INCLUSION DE GRADIENTES */
 }
 
 .imagenes {
@@ -120,7 +120,7 @@ main, section {
 }
 
 header {
-  background-color: rgb(100, 44, 44);
+  background-color: rgb(100, 44, 44); /*  INCLUSION DE VARIABLES  */
 }
 
 .header1 {
@@ -131,7 +131,7 @@ header {
   align-items: center;
   padding: 30px;
   font-size: 20px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /*  INCLUSION DE MIXIN  */
 }
 
 footer {
@@ -203,7 +203,7 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   margin-right: 19px;
-  transition: transform 0.6s ease;
+  transition: transform 0.6s ease; /* INCLUSION DE TRANSFORM, SCALE Y TRANSLATE */
 }
 .logossocialmedia:hover {
   transform: translate(3px, -3px) scale(1.05);
@@ -242,7 +242,7 @@ a {
   color: black;
   text-decoration: underline;
   font-size: 20px;
-  transition: all 3s;
+  transition: all 3s; /* INCLUSION DE TRANSITION */
 }
 a:link {
   color: black;
@@ -575,7 +575,7 @@ button {
   padding: 10px 25px;
   border: none;
   border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* INCLUSION DE TRANSITION Y TRANSFORM COMO ANIMACIONES*/
 }
 button:hover {
   transform: translateY(-2px) scale(1.05);
@@ -586,5 +586,7 @@ button:active {
   transform: translateY(0) scale(0.97);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* INCLUSION DE PARTIALS, EL MAIN SOLO CONTIENE LAS RUTAS  */
 
 /*# sourceMappingURL=main.css.map */
