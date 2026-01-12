@@ -569,4 +569,22 @@ a:active {
     padding-left: 0;
   }
 }
+button {
+  background-color: #7C3AED;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+button:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  background-color: rgb(108.4627906977, 34.6348837209, 234.8651162791);
+}
+button:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /*# sourceMappingURL=main.css.map */

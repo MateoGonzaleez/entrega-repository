@@ -1,0 +1,33 @@
+@use "../utilities/variables" as *;
+
+@mixin bton(
+  $padding,
+  $border-radius
+) {
+  background-color: #7C3AED;
+  color: white;
+  padding: $padding;
+  border: none;
+  border-radius: $border-radius;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    background-color: darken(#7C3AED, 5%);
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.97);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+button {
+  @include bton(10px 25px, 8px);
+}
+
+
+
+
