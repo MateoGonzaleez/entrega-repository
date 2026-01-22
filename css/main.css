@@ -165,7 +165,7 @@ footer {
 .nav-link {
   font-size: 16px;
   text-transform: uppercase;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .form-label {
@@ -250,7 +250,7 @@ a:link {
   color: black;
 }
 a:hover {
-  color: whitesmoke;
+  color: rgb(178, 122, 119);
 }
 a:active {
   color: goldenrod;
@@ -267,7 +267,7 @@ a:active {
 }
 
 .nav-link:hover {
-  color: #ffffff;
+  color: #6b4b4b;
 }
 
 .nav-link {
@@ -588,6 +588,16 @@ button:active {
   transform: translateY(0) scale(0.97);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* al section que contiene las 3 cards */
+.contacto-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
 
 /* INCLUSION DE PARTIALS, EL MAIN SOLO CONTIENE LAS RUTAS  */
 

@@ -48,7 +48,7 @@ footer {
   }
 
   a {
-    @include links(black, underline, 20px);
+    @include links(rgb(255, 255, 255), underline, 20px);
   }
 
 
