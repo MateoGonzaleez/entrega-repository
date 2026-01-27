@@ -1,7 +1,6 @@
 @use "../utilities/variables" as *;
 
 @media (max-width: 720px) {
-
   header {
     .header1 {
       flex-direction: column;
@@ -76,6 +75,3 @@
     padding-left: 0;
   }
 }
-
-
- 

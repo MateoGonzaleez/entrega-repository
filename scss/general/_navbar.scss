@@ -1,6 +1,5 @@
 @use "../utilities/variables" as *;
 
-
 @mixin titulares($transform, $font-size) {
   text-transform: $transform;
   font-size: $font-size;
@@ -14,7 +13,7 @@
   color: $color-link;
   text-decoration: $link-decoration;
   font-size: $link-font-size;
-  transition: all 3s;  /* INCLUSION DE TRANSITION */ 
+  transition: all 3s; /* INCLUSION DE TRANSITION */
 
   &:link {
     color: $color-link;
@@ -29,12 +28,19 @@
   }
 }
 
-
 a {
   @include link;
 }
 
-@mixin mnb ($background-color, $padding-top, $padding-bottom,$text-align,$display,$justify-content,$width){
+@mixin mnb(
+  $background-color,
+  $padding-top,
+  $padding-bottom,
+  $text-align,
+  $display,
+  $justify-content,
+  $width
+) {
   background-color: $background-color;
   padding-top: $padding-top;
   padding-bottom: $padding-bottom;
@@ -44,39 +50,38 @@ a {
   width: $width;
 }
 
-.mi-navbar{
+.mi-navbar {
   @include mnb(rgb(100, 44, 44), 40px, 40px, center, flex, center, 100%);
 }
 
-.nav-link:hover{
+.nav-link:hover {
   color: $navlinnkhover;
 }
 
-.nav-link{
+.nav-link {
   text-decoration: $navlinkk;
 }
 
-@mixin nb ($font-size,$font-weight){
+@mixin nb($font-size, $font-weight) {
   font-size: $font-size;
   font-weight: $font-weight;
 }
 
-.navbar-brand{
+.navbar-brand {
   @include nb(28px, bold);
 }
 
-#navbarSupportedContent{
+#navbarSupportedContent {
   flex-grow: $nbsc;
 }
 
-@mixin nbn ($display,$justify-content,$width,$gap){
+@mixin nbn($display, $justify-content, $width, $gap) {
   display: $display;
   justify-content: $justify-content;
   width: $width;
   gap: $gap;
 }
 
-.navbar-nav{
+.navbar-nav {
   @include nbn(flex, center, 100%, 40px);
 }
-

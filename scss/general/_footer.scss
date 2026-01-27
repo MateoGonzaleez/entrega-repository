@@ -1,14 +1,14 @@
 @use "../utilities/variables" as *;
 
 footer {
-    background-color: $fondo-header;
+  background-color: $fondo-header;
 }
 
 @mixin link {
   color: $color-link;
   text-decoration: $link-decoration;
   font-size: $link-font-size;
-  transition: all 3s;  /* INCLUSION TRANSITION */
+  transition: all 3s; /* INCLUSION TRANSITION */
 
   &:link {
     color: $color-link;
@@ -23,7 +23,7 @@ footer {
   }
 }
 
-@mixin ftr($display,$flex-direction,$text-align,$margin,$padding){
+@mixin ftr($display, $flex-direction, $text-align, $margin, $padding) {
   display: flex;
   flex-direction: $flex-direction;
   text-align: $text-align;
@@ -32,28 +32,29 @@ footer {
 }
 
 footer {
-  @include ftr(flex, column, left, 0, 20px);}
+  @include ftr(flex, column, left, 0, 20px);
+}
 
-  @mixin nalink ($font-size, $transform,$color){
-    font-size: $font-size;
-    text-transform: $transform;
-    color: $color;
-  }
+@mixin nalink($font-size, $transform, $color) {
+  font-size: $font-size;
+  text-transform: $transform;
+  color: $color;
+}
 
-  .nav-link {
-    @include nalink(16px, uppercase, black);
-  }
+.nav-link {
+  @include nalink(16px, uppercase, black);
+}
 
-  @mixin formlbl($font-size,$color){
-    font-size: $font-size;
-    color: $color;
-  }
+@mixin formlbl($font-size, $color) {
+  font-size: $font-size;
+  color: $color;
+}
 
-  .form-label{
-    @include formlbl(12px, white);
-  }
+.form-label {
+  @include formlbl(12px, white);
+}
 
-  .form-control::placeholder {
+.form-control::placeholder {
   color: $color-placeholder;
 }
 
@@ -82,10 +83,10 @@ footer {
 }
 
 .form-control {
-  @include frmctrl( black, white,solid, white,5px,50%,30px,center,0,block);
+  @include frmctrl(black, white, solid, white, 5px, 50%, 30px, center, 0, block);
 }
 
-@mixin btnprymr ($bacground-color, $border-color, $color,$padding,$vorder-radius){
+@mixin btnprymr($bacground-color, $border-color, $color, $padding, $vorder-radius) {
   background-color: $bacground-color;
   border-color: $border-color;
   color: $color;
@@ -97,14 +98,21 @@ footer {
   @include btnprymr(#7C3AED, #7C3AED, white, 10px 25px, 8px);
 }
 
-@mixin lsm($display, $flex-direction, $justify-content,$align-items, $flex-wrap, $margin-right){
+@mixin lsm(
+  $display,
+  $flex-direction,
+  $justify-content,
+  $align-items,
+  $flex-wrap,
+  $margin-right
+) {
   display: $display;
   flex-direction: $flex-direction;
   justify-content: $justify-content;
   align-items: $align-items;
   flex-wrap: $flex-wrap;
   margin-right: $margin-right;
-  transition: transform 0.6s ease;  /* INCLUSION DE TRANSFORM, SCALE Y TRANSLATE */
+  transition: transform 0.6s ease; /* INCLUSION DE TRANSFORM, SCALE Y TRANSLATE */
 }
 
 .logossocialmedia {
@@ -114,9 +122,6 @@ footer {
     transform: translate(3px, -3px) scale(1.05);
   }
 }
-
-
-
 
 @mixin form-center($max-width: 420px, $gap: 12px) {
   display: flex;
@@ -141,7 +146,14 @@ footer .form-control {
   @include form-controls-full;
 }
 
-@mixin boton($background-color, $color, $border,$padding, $border-radius,$font-weight){
+@mixin boton(
+  $background-color,
+  $color,
+  $border,
+  $padding,
+  $border-radius,
+  $font-weight
+) {
   background-color: $background-color;
   color: $color;
   border: $border;

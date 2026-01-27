@@ -51,6 +51,7 @@
   @include flexbox(row, center, center, wrap, $qs-gap);
   margin-top: 2px;
 }
+
 .qs-bloque {
   @include flexbox(row, center, center, wrap, $qs-gap);
   width: 100%;
@@ -59,10 +60,12 @@
 .qs-texto {
   @include text-block($qs-max-text);
 }
+
 .qs-media,
 .qs-med {
   @include media-block;
 }
+
 .qs-media iframe,
 .qs-med iframe,
 .videoquienessomos1 iframe,
@@ -70,6 +73,7 @@
 .direccionquienessomos3 iframe {
   @include responsive-iframe($qs-max-media);
 }
+
 .textoquienessomos1 p {
   margin: 0 auto;
   max-width: $qs-max-text;
@@ -89,7 +93,6 @@
   margin: 0 auto;
 }
 
-
 .imagenquienessomos2 {
   display: flex;
   justify-content: center;
@@ -103,12 +106,14 @@
     height: auto;
   }
 }
+
 #mult {
   width: 100%;
   max-width: 600px;
   aspect-ratio: 16 / 9;
   height: auto;
 }
+
 .titulo-quienessosmos,
 .titulo-quinessosmos {
   margin-bottom: 10px;
@@ -125,7 +130,6 @@
     margin-top: 20px;
   }
 
-  
   .qs-media iframe,
   .qs-med iframe,
   .videoquienessomos1 iframe,

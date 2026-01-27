@@ -1,35 +1,35 @@
 @use "../utilities/variables" as *;
 
-@mixin form-con-p ($display, $flex-direction,$gap,$max-width,$margin){
-    display: $display;
-    flex-direction: $flex-direction;
-    gap: $gap;
-    max-width: $max-width;
-    margin: $margin;
+@mixin form-con-p($display, $flex-direction, $gap, $max-width, $margin) {
+  display: $display;
+  flex-direction: $flex-direction;
+  gap: $gap;
+  max-width: $max-width;
+  margin: $margin;
 }
 
-.formulario-contacto-page{
-    @include form-con-p(flex, column, 12px, 420px, 0 auto);
+.formulario-contacto-page {
+  @include form-con-p(flex, column, 12px, 420px, 0 auto);
 }
 
-@mixin camp($display,$flex-direction,$gap,$align-items){
-    display: $display;
-    flex-direction: $flex-direction;
-    gap: $gap;
-    align-items: $align-items;
+@mixin camp($display, $flex-direction, $gap, $align-items) {
+  display: $display;
+  flex-direction: $flex-direction;
+  gap: $gap;
+  align-items: $align-items;
 }
 
-.campo{
-    @include camp(flex, column, 6px, center);
+.campo {
+  @include camp(flex, column, 6px, center);
 }
 
-@mixin campist ($width,$text-align){
-    width: $width;
-    text-align: $text-align;
+@mixin campist($width, $text-align) {
+  width: $width;
+  text-align: $text-align;
 }
 
 .campo input,
 .campo select,
-.campo textarea{
-    @include campist(100%, center);
+.campo textarea {
+  @include campist(100%, center);
 }

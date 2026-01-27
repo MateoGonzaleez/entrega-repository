@@ -1,140 +1,143 @@
 @use "../utilities/variables" as *;
 
-@mixin modcont ($display,$flex-direction,$justifi-content){
-    display: $display;
-    flex-direction: $flex-direction;
-    justify-content: $justifi-content;
+@mixin modcont($display, $flex-direction, $justifi-content) {
+  display: $display;
+  flex-direction: $flex-direction;
+  justify-content: $justifi-content;
 }
 
-.moda-contenedor{
-    @include modcont(flex, center, space-evenly);
+.moda-contenedor {
+  @include modcont(flex, center, space-evenly);
 }
 
-@mixin stc ($border,$padding,$margin,$width,$height,$text-align,$display){
-    border: $border;
-    padding: $padding;
-    margin: $margin;
-    width: $width;
-    height: $height;
-    text-align: $text-align;
-    display: $display;
+@mixin stc($border, $padding, $margin, $width, $height, $text-align, $display) {
+  border: $border;
+  padding: $padding;
+  margin: $margin;
+  width: $width;
+  height: $height;
+  text-align: $text-align;
+  display: $display;
 }
 
-.store-cards{
-    @include stc(2px solid black, 20px, 8px, 300px, auto, center, inline-block);
+.store-cards {
+  @include stc(2px solid black, 20px, 8px, 300px, auto, center, inline-block);
 }
 
-@mixin stimg ($width,$height){
-    width: $width;
-    height: $height;
+@mixin stimg($width, $height) {
+  width: $width;
+  height: $height;
 }
 
-.store-imagenes{
-    @include stimg(175px, 175px);
+.store-imagenes {
+  @include stimg(175px, 175px);
 }
 
-@mixin sdtp ($text-align,$font-size, $padding){
-    text-align: $text-align;
-    font-size: $font-size;
-    padding: $padding;
+@mixin sdtp($text-align, $font-size, $padding) {
+  text-align: $text-align;
+  font-size: $font-size;
+  padding: $padding;
 }
 
-.store-titulo , .store-titulo{
-    @include sdtp(center, 15px, 10px);
+.store-titulo,
+.store-titulo {
+  @include sdtp(center, 15px, 10px);
 }
 
-@mixin dp ($text-align,$font-size, $padding){
-    text-align: $text-align;
-    font-size: $font-size;
-    padding: $padding;
+@mixin dp($text-align, $font-size, $padding) {
+  text-align: $text-align;
+  font-size: $font-size;
+  padding: $padding;
 }
 
-.deportes-precio, .store-precio{
-    @include dp(center, 25px, 9px);
+.deportes-precio,
+.store-precio {
+  @include dp(center, 25px, 9px);
 }
 
-@mixin dc ($border ,$padding , $margin, $width, $text-align, $display){
-    border: $border;
-    padding: $padding;
-    margin: $margin;
-    width: $width;
-    text-align: $text-align;
-    display: $display;
+@mixin dc($border, $padding, $margin, $width, $text-align, $display) {
+  border: $border;
+  padding: $padding;
+  margin: $margin;
+  width: $width;
+  text-align: $text-align;
+  display: $display;
 }
 
-.deportes-cards{
-    @include dc(2px solid black, 20px, 8px, 280px, center, inline-block);
+.deportes-cards {
+  @include dc(2px solid black, 20px, 8px, 280px, center, inline-block);
 }
 
-
-@mixin depimg ($width,$height){
-    width: $width;
-    height: $height;
+@mixin depimg($width, $height) {
+  width: $width;
+  height: $height;
 }
 
-.deportes-imagenes{
-    @include depimg(160px, 160px);
+.deportes-imagenes {
+  @include depimg(160px, 160px);
 }
 
-@mixin mi ($display,$gap){
-    display: $display;
-    gap: $gap;
+@mixin mi($display, $gap) {
+  display: $display;
+  gap: $gap;
 }
 
-.moda-izquierda{
-    @include mi(flex, 20px);
+.moda-izquierda {
+  @include mi(flex, 20px);
 }
 
-@mixin modatit ($font-size, $transform, $text-align){
-    font-size: $font-size;
-    text-transform: $transform;
-    text-align: $text-align;
+@mixin modatit($font-size, $transform, $text-align) {
+  font-size: $font-size;
+  text-transform: $transform;
+  text-align: $text-align;
 }
 
-.moda-titulo{
-    @include modatit(30px, uppercase, center);
+.moda-titulo {
+  @include modatit(30px, uppercase, center);
 }
 
-@mixin depcont ($display, $justify-content,$align-items,$flex-wrap,$gap){
-    display: $display;
-    justify-content: $justify-content;
-    align-items: $align-items;
-    flex-wrap: $flex-wrap;
-    gap: $gap;
+@mixin depcont($display, $justify-content, $align-items, $flex-wrap, $gap) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: $flex-wrap;
+  gap: $gap;
 }
 
-.deportivo-contenedor{
-    @include depcont(flex, space-between, center, nowrap, 40px);
+.deportivo-contenedor {
+  @include depcont(flex, space-between, center, nowrap, 40px);
 }
 
-@mixin deptit ($font-size, $transform, $text-align){
-    font-size: $font-size;
-    text-transform: $transform;
-    text-align: $text-align;
+@mixin deptit($font-size, $transform, $text-align) {
+  font-size: $font-size;
+  text-transform: $transform;
+  text-align: $text-align;
 }
 
-.deportivo-titulo{
-    @include deptit(30px, uppercase, center);
+.deportivo-titulo {
+  @include deptit(30px, uppercase, center);
 }
 
-@mixin depplace ($display,$gap){
-    display: $display;
-    gap: $gap;
+@mixin depplace($display, $gap) {
+  display: $display;
+  gap: $gap;
 }
 
-.deportivo-lado{
-    @include depplace(flex, 20px);
+.deportivo-lado {
+  @include depplace(flex, 20px);
 }
 
-@mixin artmoddep ($display,$justify-content,$align-items,$flex-wrap,$gap,$width){
-    display: $display;
-    justify-content: $justify-content;
-    align-items: $align-items;
-    flex-wrap: $flex-wrap;
-    gap: $gap;
-    width: $width;
+@mixin artmoddep($display, $justify-content, $align-items, $flex-wrap, $gap, $width) {
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: $flex-wrap;
+  gap: $gap;
+  width: $width;
 }
 
-.articlespadre , .moda-contenedor , .deportivo-contenedor{
-    @include artmoddep(flex, center, stretch, wrap, 20px, 100%);
+.articlespadre,
+.moda-contenedor,
+.deportivo-contenedor {
+  @include artmoddep(flex, center, stretch, wrap, 20px, 100%);
 }

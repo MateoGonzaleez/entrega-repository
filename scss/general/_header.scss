@@ -11,11 +11,19 @@
 }
 
 header {
-  background-color: $fondo-header; /*  INCLUSION DE VARIABLES  */ 
-
+  background-color: $fondo-header; /*  INCLUSION DE VARIABLES  */
 }
 
-@mixin header1($display, $flex-direction, $justify-content, $align-content, $align-items, $padding, $font-size, $flex-wrap){
+@mixin header1(
+  $display,
+  $flex-direction,
+  $justify-content,
+  $align-content,
+  $align-items,
+  $padding,
+  $font-size,
+  $flex-wrap
+) {
   display: $display;
   flex-direction: $flex-direction;
   justify-content: $justify-content;
@@ -23,14 +31,14 @@ header {
   align-items: $align-items;
   padding: $padding;
   font-size: $font-size;
-  flex-wrap: $flex-wrap;   /*  INCLUSION DE MIXIN  */ 
+  flex-wrap: $flex-wrap; /*  INCLUSION DE MIXIN  */
 }
 
 .header1 {
   @include header1(flex, row, flex-start, center, center, 30px, 20px, wrap);
 }
 
-@mixin hdr($display,$flex-direction,$text-align,$margin,$padding){
+@mixin hdr($display, $flex-direction, $text-align, $margin, $padding) {
   display: flex;
   flex-direction: $flex-direction;
   text-align: $text-align;
@@ -39,16 +47,15 @@ header {
 }
 
 footer {
-  @include hdr(flex, column, left, 0, 20px);}
+  @include hdr(flex, column, left, 0, 20px);
+}
 
-  @mixin links ($color, $text-decoration, $font-size){
-    color: $color;
-    text-decoration: $text-decoration;
-    font-size: $font-size;
-  }
+@mixin links($color, $text-decoration, $font-size) {
+  color: $color;
+  text-decoration: $text-decoration;
+  font-size: $font-size;
+}
 
-  a {
-    @include links(rgb(255, 255, 255), underline, 20px);
-  }
-
-
+a {
+  @include links(rgb(255, 255, 255), underline, 20px);
+}
